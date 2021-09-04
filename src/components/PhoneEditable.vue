@@ -1,6 +1,8 @@
 <template>
   <div>
-    <p v-if="!isEditMode" @click="isEditMode = true">{{ phone || "-" }}</p>
+    <p class="phoneEdit" v-if="!isEditMode" @click="isEditMode = true">
+      {{ phone || "-" }}
+    </p>
     <input v-model="newPhone" @blur="changePhone" v-else autofocus />
   </div>
 </template>
@@ -24,4 +26,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.phoneEdit {
+  cursor: pointer;
+}
+</style>
