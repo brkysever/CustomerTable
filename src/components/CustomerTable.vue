@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="aa">
     <input
-      class="personelSearch"
-      type="text"
+      class="customerSearch"
+      type="search"
       v-model="search"
-      placeholder="Search Personel Name"
+      placeholder="Search Customer Name"
     />
     <table>
       <thead>
@@ -54,10 +54,9 @@
 
 <script>
 import PhoneEditable from "./PhoneEditable.vue";
-
 import faker from "faker";
 
-function createPersonel() {
+function createCustomer() {
   return {
     id: faker.datatype.number(),
     name: faker.name.findName(),
@@ -66,7 +65,7 @@ function createPersonel() {
   };
 }
 export default {
-  name: "PersonelTable",
+  name: "CustomerTable",
   components: {
     PhoneEditable,
   },
@@ -104,16 +103,16 @@ export default {
       ],
 
       rows: [
-        createPersonel(),
-        createPersonel(),
-        createPersonel(),
-        createPersonel(),
-        createPersonel(),
-        createPersonel(),
-        createPersonel(),
-        createPersonel(),
-        createPersonel(),
-        createPersonel(),
+        createCustomer(),
+        createCustomer(),
+        createCustomer(),
+        createCustomer(),
+        createCustomer(),
+        createCustomer(),
+        createCustomer(),
+        createCustomer(),
+        createCustomer(),
+        createCustomer(),
       ],
       search: "",
     };
@@ -162,7 +161,7 @@ export default {
   padding-bottom: 7px;
   cursor: pointer;
 }
-.personelSearch {
+.customerSearch {
   border: 3px solid #44475c;
   margin: 10px 10px 0 10px;
 }
@@ -171,32 +170,32 @@ table {
   font-family: "Open Sans", sans-serif;
   width: 750px;
   border-collapse: collapse;
-  border: 3px solid #44475c;
+  border: 3px solid #3a3a3a;
   margin: 10px 10px 0 10px;
 }
 
 table th {
   text-transform: uppercase;
   text-align: left;
-  background: #44475c;
+  background: #3a3a3a;
   color: #fff;
   padding: 8px;
   min-width: 30px;
 }
 table th.sortable:hover {
   cursor: pointer;
-  background: #717699;
+  background: #7e7e7e;
 }
 table td {
   text-align: left;
   padding: 8px;
-  border-right: 2px solid #7d82a8;
+  border-right: 2px solid #3a3a3a;
 }
 table td:last-child {
   border-right: none;
 }
 table tbody tr:nth-child(2n) td {
-  background: #d4d8f9;
+  background: #88888844;
 }
 
 .arrow_down {

@@ -1,20 +1,20 @@
 <template>
   <div>
-    <PersonelTable />
+    <CustomerTable />
   </div>
 </template>
 
 <script>
-import PersonelTable from "./components/PersonelTable.vue";
+import CustomerTable from "./components/CustomerTable.vue";
 
 export default {
   name: "App",
-  components: { PersonelTable },
+  components: { CustomerTable },
 };
 </script>
 
 <style>
 body {
-  background-color: whitesmoke;
+  background-color: #f1f2f7;
 }
 </style>
