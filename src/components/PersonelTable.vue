@@ -34,8 +34,17 @@
               :phone="row[col.key]"
               @phone-changed="changePhone($event, index)"
             />
-
             <p v-else>{{ row[col.key] }}</p>
+            <a
+              v-if="col.key === 'delete'"
+              :="row[col.key]"
+              @click="deleteRows(index)"
+            >
+              <img
+                class="trashBox"
+                src="https://image.flaticon.com/icons/png/512/1214/1214428.png"
+              />
+            </a>
           </td>
         </tr>
       </tbody>
@@ -45,7 +54,9 @@
 
 <script>
 import PhoneEditable from "./PhoneEditable.vue";
+
 import faker from "faker";
+
 function createPersonel() {
   return {
     id: faker.datatype.number(),
@@ -129,6 +140,9 @@ export default {
         return 0;
       });
     },
+    deleteRows(index) {
+      this.rows.splice(index, 1);
+    },
   },
   computed: {
     filteredRows: function () {
@@ -141,6 +155,13 @@ export default {
 </script>
 
 <style>
+.trashBox {
+  width: 20px;
+  height: 23px;
+  padding-left: 6px;
+  padding-bottom: 7px;
+  cursor: pointer;
+}
 .personelSearch {
   border: 3px solid #44475c;
   margin: 10px 10px 0 10px;
