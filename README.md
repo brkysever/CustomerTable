@@ -1,5 +1,15 @@
 # personneltable
 
+Functions
+
+-Search by personel name.
+
+-Sort by letter order.
+
+-Changing phone number.
+
+-Deleting.
+
 ## Project setup
 ```
 npm install
