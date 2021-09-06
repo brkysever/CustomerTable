@@ -1,5 +1,5 @@
 <template>
-  <div class="aa">
+  <div class="mainDiv">
     <input
       class="customerSearch"
       type="search"
@@ -154,9 +154,6 @@ export default {
 </script>
 
 <style>
-.aa {
-  width: 50%;
-}
 body {
   background-color: #f1f2f7;
 }
@@ -217,5 +214,24 @@ table tbody tr:nth-child(2n) td {
 .customerSearch {
   border: 3px solid #44475c;
   margin: 10px 10px 0 10px;
+}
+.mainDiv {
+  width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  table {
+    width: 600px;
+  }
+}
+@media only screen and (max-width: 615px) {
+  table {
+    width: 450px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  table {
+    width: 400px;
+  }
 }
 </style>
