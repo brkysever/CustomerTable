@@ -1,4 +1,4 @@
-# costumertable
+# customerTable
 
 Functions
 
