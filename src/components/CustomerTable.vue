@@ -154,16 +154,11 @@ export default {
 </script>
 
 <style>
-.trashBox {
-  width: 20px;
-  height: 23px;
-  padding-left: 6px;
-  padding-bottom: 7px;
-  cursor: pointer;
+.aa {
+  width: 50%;
 }
-.customerSearch {
-  border: 3px solid #44475c;
-  margin: 10px 10px 0 10px;
+body {
+  background-color: #f1f2f7;
 }
 
 table {
@@ -211,5 +206,16 @@ table tbody tr:nth-child(2n) td {
   background-repeat: no-repeat;
   background-size: contain;
   background-position-y: bottom;
+}
+.trashBox {
+  width: 20px;
+  height: 23px;
+  padding-left: 6px;
+  padding-bottom: 7px;
+  cursor: pointer;
+}
+.customerSearch {
+  border: 3px solid #44475c;
+  margin: 10px 10px 0 10px;
 }
 </style>
