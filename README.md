@@ -2,7 +2,7 @@
 
 Functions
 
--Search by personel name.
+-Search by costumer name.
 
 -Sort by letter order.
 
